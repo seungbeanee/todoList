@@ -1,84 +1,182 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
 
 body {
-  background-color: #f6f6f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Nanum Gothic";
-  min-height: 100vh;
-  margin: 0px;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nanum Gothic";
+    min-height: 100vh;
+    margin: 0px;
 }
 
-@media (min-width:650px) {
-  .App {
-      width: 640px;
-  }
+@media (min-width:310px) {
+    .App {
+        width: 300px;
+    }
 }
 
-@media (max-width:650px) {
-  .App {
-      width: 90vw;
-  }
+@media (max-width:310px) {
+    .App {
+        width: 40vw;
+    }
 }
 
 #root {
-  background-color: white;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
 }
 
 .App {
-  min-height: 100vh;
-  padding-left: 20px;
-  padding-right: 20px;
+    min-height: 40vw;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 /* MyButton */
 .MyButton {
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
 
-  font-size: 18px;
+    font-size: 16px;
 
-  white-space: nowrap;
-  font-family: "Nanum Gothic";
+    white-space: nowrap;
+    font-family: "Nanum Gothic";
 }
 
 .MyButton_default {
-  background-color: #ececec;
-  color: black;
+    background-color: #ececec;
+    color: black;
 }
 .MyButton_positive {
-  background-color: #64c964;
-  color: white;
+    background-color: #FAE053;
+    color: white;
 }
 .MyButton_negative {
-  background-color: #fd565f;
-  color: white;
+    background-color: #97999B;
+    color: white;
+}
+
+.MyButton_icon {
+    border: none;
+    background-color:transparent;
 }
 
 /* HEADER */
 header {
-  padding-top: 20px;
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e2e2e2;
 }
 
 header > div {
-  display: flex;
+    display: flex;
 }
 
 header .head_text {
-  width: 50%;
-  font-size: 25px;
-  justify-content: center;
+    width: 50%;
+    font-size: 18px;
+    justify-content: center;
+}
+
+header .head_btn_left {
+    width: 25%;
+    justify-content: start;
+}
+
+header .head_btn_right {
+    width: 25%;
+    justify-content: end;
+}
+
+.header_button {
+    font-family: "Nanum Gothic";
+}
+
+/* TodoList */
+
+.TodoListMenu {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.TodoListMenu input {
+    border: none;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    font-family: "Nanum Gothic";
+    font-size: 18px;
+}
+
+.TodoItem {
+    padding-top: 5px;
+}
+
+.TodoItem label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TodoItem div {
+    display: flex;
+    align-items: center;
+}
+
+.TodoItem input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #FAE053;
+    appearance: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+.TodoItem input[type="checkbox"]:checked {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    background-color: #97999B;
+    border: 2px solid #97999B;
+    appearance: none;
+    cursor: pointer;
+}
+
+.TodoItem .toggle {
+    color: #97999B;
+    text-decoration:line-through;
+    transition: background 0.2s;
+}
+
+.TodoItemDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* icon */
+.TrashColor {
+    color: #97999B;
+
+    cursor: pointer;
 }
