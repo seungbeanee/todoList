@@ -48,11 +48,10 @@ const decreaseDay = () => {
 
   useEffect(()=>{
     const curCurrentDay = getStringDate(curDate);
-
     setData(
       data.filter((it) => curCurrentDay === it.date)
     )
-  },[])
+  },[curDate])
 
   return (
     <div className="App">

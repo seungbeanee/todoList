@@ -132,18 +132,13 @@ header .head_btn_right {
     padding-top: 5px;
 }
 
-.TodoItem label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .TodoItem div {
     display: flex;
     align-items: center;
 }
 
 .TodoItem input[type="checkbox"] {
+    padding: 6px;
     margin-right: 10px;
     width: 16px;
     height: 16px;
@@ -177,6 +172,5 @@ header .head_btn_right {
 /* icon */
 .TrashColor {
     color: #97999B;
-
     cursor: pointer;
 }
