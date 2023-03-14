@@ -5,11 +5,10 @@ const TodoItem = ({id, content, onDelete}) => {
 
     const [isCheck, setIsCheck] = useState(false);
 
-    const changeHandler = (id, checked) => {
+    const changeHandler = (checked) => {
         if(checked){
             setIsCheck(true);
-        }
-        else {
+        } else {
             setIsCheck(false);
         }
     }
@@ -26,7 +25,7 @@ const TodoItem = ({id, content, onDelete}) => {
                         {content}
                     </label>
                 </div>
-                <MyButton type={"icon"} onClick={()=>onDelete(id)}/>
+                <MyButton type={"icon"} onClick={()=>{onDelete(id)}}/>
             </div>
         </div>
     )

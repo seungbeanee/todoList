@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import MyButton from "./components/MyButton";
 import TodoItem from "./TodoItem";
 
@@ -8,10 +8,6 @@ const TodoList = ({todoList, curDate, onCreate, onDelete}) => {
 
     const [content, setContent] = useState("");
     const inputContent = useRef();
-
-    useEffect(()=>{
-        
-    })
 
     const handleChangeState = (e) => {
         setContent(e.target.value)
