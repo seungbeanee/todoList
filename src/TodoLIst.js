@@ -17,7 +17,6 @@ const TodoList = ({todoList, onCreate, onDelete}) => {
             return;
         }
         onCreate(content);
-        alert("리스트를 추가하였습니다.");
 
         setContent("");
     }
