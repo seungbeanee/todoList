@@ -2,9 +2,7 @@ import { useRef, useState } from "react";
 import MyButton from "./components/MyButton";
 import TodoItem from "./TodoItem";
 
-import {getStringDate} from "./util/date"
-
-const TodoList = ({todoList, curDate, onCreate, onDelete}) => {
+const TodoList = ({todoList, onCreate, onDelete}) => {
 
     const [content, setContent] = useState("");
     const inputContent = useRef();
@@ -18,7 +16,7 @@ const TodoList = ({todoList, curDate, onCreate, onDelete}) => {
             inputContent.current.focus();
             return;
         }
-        onCreate(getStringDate(curDate), content);
+        onCreate(content);
         alert("리스트를 추가하였습니다.");
 
         setContent("");
