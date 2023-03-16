@@ -19,7 +19,7 @@ const TodoItem = ({id, content, onDelete}) => {
                 <div>
                     <input type="checkbox"
                         id={id}
-                        onChange={(e)=>{changeHandler(e.currentTarget.id, e.currentTarget.checked)}}
+                        onChange={(e)=>{changeHandler(e.currentTarget.checked)}}
                     />
                     <label className={isCheck ? "toggle" : ""}>
                         {content}
